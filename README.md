@@ -57,25 +57,32 @@ It will include example Sanitized Test Cases and demonstrate how to organize cod
 ## Project Structure
 
 Selenium-WebDriver-Automation-Framework/
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── com/
-│   │           └── yourcompany/
-│   │               ├── utilities/       // Utility classes
-│   │               └── testrail/        // TestRail integration classes.
-│   ├── test/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── yourcompany/
-│   │   │           ├── pages/           // Page object models
-│   │   │           ├── tests/           // Test classes
-│   │   │           └── base/            // Base test class
-│   │   └── resources/
-│   │       ├── config.properties      // Configuration file
-│   │       ├── testdata/              // Test data files
-├── pom.xml                          // Maven project file
-└── README.md
+
+    ├── src/
+    │     ├── main/
+    │     │   └── java/
+    │     │       └── com/
+    │     │           └── yourCompany/
+    │     │               ├── pages/                          // Page object classes
+    │     │               │   ├── HomePage.java
+    │     │               │   └── LoginPage.java
+    │     │               ├── testrail/                       // TestRail integration
+    │     │               │   └── TestRailIntegration.java
+    │     │               └── utilities/                      // Utility classes
+    │     │                   └── WebDriverManager.java
+    │     └── test/
+    │         ├── java/
+    │         │   └── com/
+    │         │       └── yourcompany/
+    │         │           ├── base/                           // Base test class
+    │         │           │   └── BaseTest.java
+    │         │           └── tests/                          // Test classes
+    │         │               ├── HomePageTest.java
+    │         │               └── LoginPageTest.java
+    │         └── resources/                                  // Configuration file
+    │             └── config.properties
+    └── README.md
+
 
 ## TestRail Integration
 
